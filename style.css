@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+.mynavbar{
+    display: inline-block;
+    padding-right: 10px;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #F4FFF9;

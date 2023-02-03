@@ -3,8 +3,8 @@ const myLinks = [
     ["Teste", "/teste.html"],
     ["Projeto 1", "/projects/projeto1.html"],
     ["Currículo", "/curriculo.html"],
-    ["GitHub", "https://github.com/guilhermeo97"],
-    ["Linkedin", "https://www.linkedin.com/in/guilherme-oliveira-9b6b02109/"]
+    ["GitHub", "https://github.com/Asaph-T-Souza"],
+    ["LinkedIn", "https://www.linkedin.com/in/asaph-teixeira-e-souza-038248170/"]
 ];
 
 class MyHeader extends HTMLElement{
@@ -33,6 +33,7 @@ function navBar(webpageList) {
     for(let i = 0; i < webpageList.length; i++){
         let li = document.createElement("li");
         let a = document.createElement("a");
+        li.setAttribute("class", "mynavbar");
         a.setAttribute("href", webpageList[i][1]);
         a.textContent = webpageList[i][0];
         li.appendChild(a);
@@ -44,4 +45,12 @@ function navBar(webpageList) {
     return nav;    
 }
 
+function addCss(){
+    let myCss = document.createElement("link");
+    myCss.setAttribute("rel", "stylesheet");
+    myCss.setAttribute("href", "/style.css");
+    document.head.appendChild(myCss);
+}
+
+addCss();
 customElements.define("my-header", MyHeader);
